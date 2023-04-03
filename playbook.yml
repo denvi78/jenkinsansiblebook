@@ -1,7 +1,5 @@
 ---
 - name: "Test playbook run"
-  hosts: all
   tasks:
-    - name: "Debug"
-      ansible.builtin.debug:
-        msg: "Test debug"
+    ansible.builtin.debug:
+    msg: "Test debug"
