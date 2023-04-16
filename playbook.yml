@@ -10,5 +10,5 @@
 
     - name: Debug output
       debug:
-        var: output.stdout_lines
+        var: apt_update.stdout_lines
        
