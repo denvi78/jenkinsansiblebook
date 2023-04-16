@@ -1,6 +1,5 @@
 -
-  name: "Test playbook run"
-  hosts: localhost
+  name: "Update packages
   tasks:
     - name: apt-get update
       apt:
