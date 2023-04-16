@@ -2,6 +2,7 @@
   name: "Test playbook run"
   hosts: localhost
   tasks:
-    - name: Execute command "date"
-      command: date
+    - name: apt-get update
+      apt:
+        update_cache: yes
     
