@@ -6,7 +6,7 @@
     - name: apt-get update
       apt:
         update_cache: yes
-      register: output
+      register: apt_update
 
     - name: Debug output
       debug:
