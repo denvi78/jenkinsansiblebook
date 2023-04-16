@@ -1,6 +1,7 @@
 -
   name: "Update packages"
   hosts: all
+  become: true
   tasks:
     - name: apt-get update
       apt:
