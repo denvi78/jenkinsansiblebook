@@ -1,5 +1,5 @@
 -
-  name: "Update packages
+  name: "Update packages"
   tasks:
     - name: apt-get update
       apt:
