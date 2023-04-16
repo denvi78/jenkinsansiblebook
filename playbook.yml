@@ -6,9 +6,8 @@
     - name: apt-get update
       apt:
         update_cache: yes
-      register: apt_update
+      register: apt_get_update_result
 
-    - name: Debug output
-      debug:
-        var: apt_update.stdout_lines
+    - name: Debug registered var
+      debug: var=apt_get_update_result.stdout_lines
        
