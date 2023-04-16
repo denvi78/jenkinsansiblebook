@@ -6,9 +6,9 @@
     - name: apt-get update
       apt:
         update_cache: yes
-      register: apt_update_output
+      register: output
 
     - name: Debug output
       debug:
-        msg: "{{ apt_update_output.stdout_lines }}"
+        var: output.stdout_lines
        
