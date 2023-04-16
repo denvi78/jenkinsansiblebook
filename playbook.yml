@@ -6,7 +6,10 @@
     - name: apt-get update
       apt:
         update_cache: yes
-      register: apt_get_update_result
 
+    - name: unattended-upgrade
+      command: unattended-upgrade -v --dry-run 
+      register: unattended_upgrade
+ 
     - name: Debug registered var
-      debug: var=apt_get_update_result.stdout_lines
+      debug: var=unattended_upgrade.stdout_lines
