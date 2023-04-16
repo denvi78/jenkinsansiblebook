@@ -1,5 +1,6 @@
 -
   name: "Update packages"
+  hosts: all
   tasks:
     - name: apt-get update
       apt:
