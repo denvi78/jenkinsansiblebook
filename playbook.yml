@@ -9,5 +9,6 @@
       register: apt_get_update_result
 
     - name: Debug registered var
-      debug: var=apt_get_update_result.stdout_lines
+      debug: 
+        var: apt_get_update_result.msg
        
