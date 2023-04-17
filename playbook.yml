@@ -7,9 +7,17 @@
       apt:
         update_cache: yes
 
-    - name: unattended-upgrade
+    - name: unattended-upgrade-dry-run
       command: unattended-upgrade -v --dry-run 
-      register: unattended_upgrade
+      register: unattended_upgrade_dry_run
  
+    - name: Debug registered dry-run var
+      debug: var=unattended_upgrade_dry_run.stdout_lines
+
+    - name: unattended-upgrade
+      command: unattended-upgrade -v 
+      register: unattended_upgrade
+      
     - name: Debug registered var
       debug: var=unattended_upgrade.stdout_lines
+      
